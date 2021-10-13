@@ -144,7 +144,7 @@ export default $;
 
 ---
 
-## 4.1 使用 babel/typescript
+## 4.1 使用 babel/typescript + webpack/rollup/parcel
 
 ```js
 {
@@ -165,12 +165,24 @@ export default $;
 
 ## 4.2 使用原生esm(Web)
 
-<img src="/img/esm-web-usage.jpg">
 
+```bash
+$ cd examples/vanilla && npm run dev
+```
 ---
 
-## 4.3 使用原生esm(Node.js)
+## 4.3 使用原生esm(Node.js)(1)
 
+```bash
+$ cd examples/node-esm1 && node index.js
+```
+---
+
+## 4.4 使用原生esm(Node.js)(2)
+
+```bash
+$ cd examples/node-esm2 && node index.mjs
+```
 ---
 
 # Components
