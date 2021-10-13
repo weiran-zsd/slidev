@@ -144,6 +144,57 @@ export default $;
 
 ---
 
+## 3.3 兼容性(toolings)
+
+<table>
+    <thead>
+        <tr>
+            <th>工具</th>
+            <th>支持情况</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>babel</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>webpack</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>eslint</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+        <td>rollup</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+        <td>Typescript</td>
+            <td>✅(ts v4.5 beta)</td>
+        </tr>
+        <tr>
+        <td>mocha</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+        <td>jest</td>
+            <td>🚧</td>
+        </tr>
+    </tbody>
+</table>
+
+---
+
+<img src="/img/eslint-esm.jpg" height="150px">
+
+---
+
+<img src="/img/ts-esm.jpg" height="150px">
+
+---
+
 ## 4.1 使用 babel/typescript + webpack/rollup/parcel
 
 ```js
@@ -165,6 +216,7 @@ export default $;
 
 ## 4.2 使用原生esm(Web)
 
+<br/><br/><br/><br/><br/>
 
 ```bash
 $ cd examples/vanilla && npm run dev
@@ -172,6 +224,7 @@ $ cd examples/vanilla && npm run dev
 ---
 
 ## 4.3 使用原生esm(Node.js)(1)
+<br/><br/><br/><br/><br/>
 
 ```bash
 $ cd examples/node-esm1 && node index.js
@@ -180,22 +233,54 @@ $ cd examples/node-esm1 && node index.js
 
 ## 4.3 使用原生esm(Node.js)(2)
 
+<br/><br/><br/><br/><br/>
+
 ```bash
 $ cd examples/node-esm2 && node index.mjs
 ```
 ---
 
 ## 4.3 使用原生esm(Node.js)(3)
+<br/><br/><br/><br/><br/>
 
 ```bash
 $ cd examples/node-esm1 && node mix-cjs.js
 ```
+
 ---
 
-layout: center
-class: text-center
+## 4.3 使用原生esm(Node.js)(4)
+<br/><br/><br/><br/><br/>
+
+```bash
+$ cd examples/node-dual
+```
 ---
 
-# Learn More
+## 4.4 使用原生esm(Node.js)(5)
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+1. 使用 `"type": "module"` 或 `*.mjs`
+2. 使用 `.js/.mjs`(e.g. `import foo from "./foo.js"`)
+3. 使用 `pkg.exports`(dual-mode)
+4. 在 esm 中引入 cjs ✅
+5. 在 cjs 中引入 esm ❌
+
+---
+
+# 5. 展望
+
+<h3>如何判断使用esm还是其它？</h3>
+<p>优先使用esm, 如果遇到问题，再考虑其它方案。😀</p>
+
+---
+
+# 参考文献
+
+1. https://jakearchibald.com/2017/es-modules-in-browsers/
+2. https://caniuse.com/
+3. https://nodejs.org/en/
+4. https://www.typescriptlang.org/docs/
+5. https://devblogs.microsoft.com/typescript/announcing-typescript-4-5-beta/#esm-nodejs
+6. https://blog.sindresorhus.com/get-ready-for-esm-aa53530b3f77
+7. https://gils-blog.tayar.org/posts/using-jsm-esm-in-nodejs-a-practical-guide-part-1/
+8. https://gils-blog.tayar.org/posts/using-jsm-esm-in-nodejs-a-practical-guide-part-2/
