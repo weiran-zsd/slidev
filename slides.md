@@ -14,6 +14,7 @@ lineNumbers: false
 # some information about the slides, markdown enabled
 info: |
   ## es modules: 昨天，今天，明天
+remoteAssets: false
 ---
 
 # 《ES Modules 的昨天，今天，明天》
