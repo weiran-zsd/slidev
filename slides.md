@@ -217,45 +217,33 @@ export default $;
 
 ## 4.2 使用原生esm(Web)
 
-<br/><br/><br/><br/><br/>
+<img src="/img/vanilla.jpg"/>
+<img src="/img/vanilla-result.jpg"/>
 
-```bash
-$ cd examples/vanilla && npm run dev
-```
 ---
 
 ## 4.3 使用原生esm(Node.js)(1)
-<br/><br/><br/><br/><br/>
 
-```bash
-$ cd examples/node-esm1 && node index.js
-```
+<img src="/img/node-esm-type-module.jpg"/>
+
 ---
 
 ## 4.3 使用原生esm(Node.js)(2)
 
-<br/><br/><br/><br/><br/>
+<img src="/img/node-esm-mjs.jpg"/>
 
-```bash
-$ cd examples/node-esm2 && node index.mjs
-```
 ---
 
 ## 4.3 使用原生esm(Node.js)(3)
-<br/><br/><br/><br/><br/>
 
-```bash
-$ cd examples/node-esm1 && node mix-cjs.js
-```
+<img src="/img/node-mix-cjs.jpg"/>
 
 ---
 
 ## 4.3 使用原生esm(Node.js)(4)
-<br/><br/><br/><br/><br/>
 
-```bash
-$ cd examples/node-dual
-```
+<img src="/img/node-dual.jpg" width="600"/>
+
 ---
 
 ## 4.4 使用原生esm(Node.js)(5)
