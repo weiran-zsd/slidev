@@ -125,11 +125,12 @@ export default $;
 
 # 2. 为什么要使用 ES Modules?
 
-```html
-<Tweet id="1349312503835054080" />
-```
-<Tweet id="1349312503835054080" scale="0.65" />
+<img src="/img/why-esm.jpg">
+---
 
+## 2.1 严格模式
+
+<img src="/img/strict-mode.jpg">
 ---
 
 ## 3.1 兼容性(浏览器)
