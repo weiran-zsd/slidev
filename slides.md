@@ -17,7 +17,7 @@ info: |
 remoteAssets: false
 ---
 
-# 《ES Modules 的昨天，今天，明天》
+# 从ES modules 看 JavaScript 的发展和演化
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -44,15 +44,10 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 # TOC
 
-- 🎨 1. 什么是 ES Modules?
-- 💻 2. 为什么要使用 ES Modules?
-- 🔥 3. 兼容性
-- 🧑‍💻 4. 如何使用
-  - babel/typescript
-  - web
-  - node
-  - deno
-- 📤 5. 展望
+- 🎨 1. the history (1980~2015)
+- 💻 2. esm 兼容性
+- ✏️ 3. esm 使用
+- 📤 4. 展望
 
 <br>
 <br>
@@ -78,22 +73,128 @@ h1 {
 
 ---
 
-# 1. 什么是 ES Modules?
-
-|     |     |     |
-| --- | --- | --- |
-| <img src="/icons/js.png" class="w-8 h-7"> | JS v1.0 | 1995 |
-| <img src="/icons/node.png" class="w-8 h-7">| Node.js(commonjs) | 2009 |
-| <img src="/icons/requirejs.png" class="w-8 h-7"> | RequireJS | 2010 |
-| <img src="/icons/typescript.png" class="w-8 h-7"> | TypeScript v0.8 | 2012 |
-| <img src="/icons/js.png" class="w-8 h-7"> | ES6(aka ES2015) | 2015 |
-| <img src="/icons/babel.svg" class="w-8 h-7"> | 6to5(babel) | 2015 |
-| <img src="/icons/node.png" class="w-8 h-7">| Node.js v8.5.0/v12.22.0 (esm) | 2017~2021 |
-| <img src="/icons/deno.jpeg" class="w-8 h-7"> | Deno | 2018 |
+# 1. the history (1980~2021)
 
 ---
 
-# 1.1 iife => commonjs => esm
+## 1989~1991, the web
+
+<img src="/img/web-creator.jpg"/>
+
+---
+
+<img src="/img/form.jpg">
+
+---
+
+## 1996, JavaScript(Netscape)
+
+<p>
+<!-- <img src="/icons/js.png" width="200" height="200"/> -->
+<img src="/img/js-creator.jpg" width="200" height="200">
+</p>
+
+---
+
+```js
+foo = 0;
+console.log(foo); // ?
+```
+
+---
+
+```js
+var foo = 0;
+console.log(window.foo); // ?
+```
+
+---
+
+```js
+function foo(){
+  this.bar = "bar";
+}
+
+foo(); //?
+```
+
+---
+
+```js
+var foo = 0;
+
+foo.bar = "bar"; //?
+```
+
+---
+
+# 1999, ES3
+
+* regex
+* try...catch
+* ...
+
+---
+
+# 2003, ES4 draft
+
+* classes
+* module
+* optional type annotations & static types
+* generators & iterators
+* destructuring assignment
+* ...
+
+---
+
+# 2008, Chrome(google)
+
+<img src="/img/chrome.jpeg" width="200" height="200"/>
+
+---
+
+<img src="/img/browsers-perf.jpg"/>
+
+---
+
+# 2009/11/8, Node.js(Ryan Dahl)
+
+* commonjs
+
+---
+
+# 2009/12/9, ES3.1 (ES5)
+
+* strict mode
+* getters & setters
+* JSON
+* ...
+
+
+
+<h1>严格模式</h1>
+
+```js
+"use strict";
+
+foo = 0;
+console.log(foo);
+```
+
+---
+
+# 2015, ES2015(aka ES6)
+
+* es modules
+* classes
+* generators & iterators
+* destructuring assignment
+* ...
+
+---
+
+
+## modules: iife => commonjs => esm
 
 ```ts {1-5|7-8|10-11}
 var $ = (function(){
@@ -120,18 +221,14 @@ export default $;
   display: none;
 }
 </style>
-
 ---
 
-# 2. 为什么要使用 ES Modules?
-
+## 为什么要使用 es modules?
 <img src="/img/why-esm.jpg">
+
+
 ---
 
-## 2.1 严格模式
-
-<img src="/img/strict-mode.jpg">
----
 
 ## 3.1 兼容性(浏览器)
 
@@ -259,8 +356,21 @@ export default $;
 
 # 5. 展望
 
-<h3>如何判断使用esm还是其它？</h3>
-<p>优先使用esm, 如果遇到问题，再考虑其它方案。😀</p>
+Q: esm的未来？
+
+<img src="/img/esm-future.jpg">
+
+---
+
+Q: The TC39 Process?
+
+* 🤷🏻 Stage 0: Strawperson
+* 💡 Stage 1: Proposal
+* ✍🏻 Stage 2: Draft
+* 📝 Stage 3: Candidate - *almost final*
+* 🎖 Stage 4: Formal standard
+---
+# QA
 
 ---
 
@@ -274,3 +384,4 @@ export default $;
 6. https://blog.sindresorhus.com/get-ready-for-esm-aa53530b3f77
 7. https://gils-blog.tayar.org/posts/using-jsm-esm-in-nodejs-a-practical-guide-part-1/
 8. https://gils-blog.tayar.org/posts/using-jsm-esm-in-nodejs-a-practical-guide-part-2/
+9. https://tc39.es/process-document/
